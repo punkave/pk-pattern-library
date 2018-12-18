@@ -1,0 +1,29 @@
+.pkpl__color-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 80rem;
+  margin-left: -4rem;
+}
+
+.pkpl__color-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  height: 12rem;
+  margin: 0 0 4rem 4rem;
+  border-radius: 0.6rem;
+}
+
+.pkpl__color-section span {
+  padding: 0.6rem;
+  border: 0.1rem solid #000;
+  border-radius: 0.6rem;
+  color: #000;
+  font-size: 1.2rem;
+}
+
+span.pkpl__color-inverse {
+  border-color: #fff;
+  color: #fff;
+}
