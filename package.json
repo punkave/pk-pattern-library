@@ -1,0 +1,25 @@
+{
+  "name": "pk-pattern-library",
+  "version": "1.0.0",
+  "description": "A pattern library generator for ApostropheCMS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/punkave/pk-pattern-library.git"
+  },
+  "author": "P'unk Ave",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/punkave/pk-pattern-library.git/issues"
+  },
+  "homepage": "https://github.com/punkave/pk-pattern-library#readme",
+  "devDependencies": {
+    "fs-extra": "^7.0.1",
+    "stylelint": "^9.9.0",
+    "stylelint-config-punkave": "^0.1.0",
+    "stylelint-webpack-plugin": "^0.10.5"
+  }
+}

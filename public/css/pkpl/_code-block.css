@@ -1,0 +1,41 @@
+.pkpl__markup-toggle {
+  display: block;
+  width: 100%;
+  padding: 0.8rem 0;
+  border: 0.1rem solid #E0E6ED;
+  border-top-color: transparent;
+  border-radius: 0 0 0.6rem 0.6rem;
+  color: #616367;
+  background-color: #f8f8f8;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.pkpl__markup-toggle.is-active {
+  border-top-color: #E0E6ED;
+}
+
+.pkpl__markup-toggle:focus {
+  outline: 0;
+}
+
+.pkpl__markup-container {
+  display: none;
+  border: 0.1rem solid #E0E6ED;
+  border-top-color: transparent;
+  border-bottom: none;
+}
+
+.pkpl__markup-container.is-active {
+  display: block;
+}
+
+code.hljs {
+  padding: 3rem;
+  background-color: #fff;
+  font-size: 1.4rem;
+}

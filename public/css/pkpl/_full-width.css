@@ -1,0 +1,48 @@
+.pkpl.is-hidden {
+  position: absolute;
+  visibility: hidden;
+  height: 0;
+}
+
+.pkpl-full-width {
+  display: none;
+}
+
+.pkpl-full-width.is-active {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.pkpl__full-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.pkpl__full-toggle img {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.pkpl-full-width__back {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  margin: 5rem;
+  padding: 1rem;
+  border: 0.1rem solid #E0E6ED;
+  border-radius: 0.6rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.pkpl-full-width__back img {
+  margin-right: 1rem;
+}
