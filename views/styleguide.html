@@ -86,7 +86,7 @@
                       <div class="pkpl__color-container">
                         {% for color in component.colors %}
                           <div class="pkpl__color-section" style="background-color: {{ color }}">
-                            <span class="{{ 'pkpl__color-inverse' if apos.helpers.hexToRGB(color) }}">{{ color }}</span>
+                            <span class="{{ 'pkpl__color-inverse' if apos.templates.hexToRGB(color) }}">{{ color }}</span>
                           </div>
                         {% endfor %}
                       </div>

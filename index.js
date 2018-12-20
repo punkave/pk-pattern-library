@@ -7,9 +7,28 @@ module.exports = {
   label: 'Pattern Library',
   slug: '/styleguide',
   construct: function (self, options, callback) {
+    self.apos.templates.addHelpers({
+      hexToRGB: (hex) => {
+        let r = parseInt(hex.slice(1, 3), 16);
+        let g = parseInt(hex.slice(3, 5), 16);
+        let b = parseInt(hex.slice(5, 7), 16);
+        if ((r * 0.299 + g * 0.587 + b * 0.114) > 186) {
+          return false;
+        } else {
+          return true;
+        }
+      }
+    });
     const name = self.__meta.name;
     const dir = _.find(self.__meta.chain, { 'name': self.__meta.name }).dirname;
-    const config = require(`${dir}/data.json`);
+    const masterConfig = require('./data.json')
+    var localConfig;
+    try {
+    localConfig = require(`${dir}/data.json`);
+    } catch(error) {
+      localConfig = {};
+    }
+    const config = _.merge(masterConfig, localConfig);
     self.apos.app.get(self.options.slug, function (req, res) {
       return self.sendPage(req, self.renderer('styleguide'),
         {
