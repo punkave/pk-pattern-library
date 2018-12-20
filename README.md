@@ -1,5 +1,17 @@
 ## wip : pk-pattern-library
 
+#### config
+
+```
+app.js
+
+const apos = require('apostrophe')({
+...
+  modules: {
+    'my-pattern-library': { extend: 'pk-pattern-library' }
+  }
+```
+
 
 #### global options
 
