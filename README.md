@@ -76,3 +76,7 @@ Scaffold a component using this command, where `foo` is the group, and `bar` is 
 ```
 $ node app MODULE_NAME:create foo bar
 ```
+
+#### Examples
+
+[LawCoin Styleguide](http://lawcoin.punkave.net/styleguide)
