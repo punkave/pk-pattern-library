@@ -25,6 +25,7 @@ Key | Default | Description
 ---|---|---
 project_name | null | `string`: Name of the project
 project_logo | null | `string`: Optional logo for the navigation
+hide_project_name | null | `boolean`: Hides the project name, if you prefer a logo.
 overview | array | `array`: contains an object configuration with introductory information.
 groups | null | `array`: contains a single group object, and your array of components.
 components | null | `array`: a collection of components that you wish to include in your group.
