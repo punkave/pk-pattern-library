@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/punkave/pk-pattern-library#readme",
   "devDependencies": {
+    "chalk": "^2.4.2",
     "fs-extra": "^7.0.1",
     "stylelint": "^9.9.0",
     "stylelint-config-punkave": "^0.1.0",
