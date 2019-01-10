@@ -8,7 +8,7 @@
   overflow-y: scroll;
   overflow-x: hidden;
   width: 28rem;
-  border-right: 0.1rem solid #E0E6ED;
+  border-right: 0.1rem solid #ECECEC;
 }
 
 .pkpl__header-title {
@@ -46,7 +46,7 @@
   display: block;
   width: 100%;
   padding: 0.6rem 3rem;
-  border-top: 1px solid #E0E6ED;
+  border-top: 1px solid #ECECEC;
   color: #303637;
   font-size: 1.4rem;
   text-decoration: none;
@@ -55,7 +55,7 @@
 }
 
 .pkpl__navigation-group-title.is-active {
-  border-bottom: 0.1rem solid #E0E6ED;
+  border-bottom: 0.1rem solid #ECECEC;
 }
 
 .pkpl__navigation-group-title:focus {
@@ -71,7 +71,7 @@
 .pkpl__navigation-component-title {
   padding: 0.6rem 4.5rem;
   border-top: none;
-  border-bottom: 0.1rem solid #E0E6ED;
+  border-bottom: 0.1rem solid #ECECEC;
   color: #636363;
   background-color: #f8f8f8;
 }
@@ -93,7 +93,7 @@
 }
 
 .pkpl__component-group:last-of-type .pkpl__navigation-group-title {
-  border-bottom: 1px solid #E0E6ED;
+  border-bottom: 1px solid #ECECEC;
 }
 
 .pkpl__logo {

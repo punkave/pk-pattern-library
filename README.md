@@ -31,34 +31,52 @@ components | null | `array`: a collection of components that you wish to include
 
 Example of `data.json` for configuring component groups
 ```
-{
-  "project_name": 'Test Project',
-  "project_logo": '/image.png',
-  "overview": [
-    {
-      "name": "introduction",
-      "title": 'Introduction',
-      "description": 'This is a description',
-    }
-  ],
-  "groups": [
-    {
-      "name": "typography",
-      "title": "Typography",
-      "description": string,
-      "components": [
-        {
-          "name": "typography/title-primary",
-          "title": "Title Primary",
-          "description": null,
-          "options": {
-              "size": "half"
+  {
+    "project_name": 'Test Project',
+    "project_logo": '/image.png',
+    "overview": [
+      {
+        "name": "introduction",
+        "title": 'Introduction',
+        "description": 'This is a description',
+      }
+    ],
+    "groups": [
+      {
+        "name": "typography",
+        "title": "Typography",
+        "description": string,
+        "components": [
+          {
+            "name": "typography/title-primary",
+            "title": "Title Primary",
+            "description": null,
+            "options": {
+                "size": "half"
+            }
           }
-        }
-      ]
+        ]
+      }
+    ]
+  }
+```
+
+#### Special component types
+- `Colors` is a special component that takes an array of hex values.
+```
+  "components": [
+    {
+      "name": "colors",
+      "title": "Colors",
+      "colors": [
+        "#2F2D41",
+        "#472B8A"
+      ],
+      "options": {
+        "size": "full"
+      }
     }
   ]
-}
 ```
 
 #### Other `components` options
