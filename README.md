@@ -1,6 +1,6 @@
 ## wip : pk-pattern-library
 
-#### Get Started
+#### Getting Started
 
 ```
 app.js
