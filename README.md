@@ -12,7 +12,7 @@ const apos = require('apostrophe')({
   }
 ```
 
-By default, your new pattern library will load by visiting `/styleguide`. This can be configured (see below).
+By default, visiting `/styleguide` will load the pattern library. This is configurable (see below).
 
 
 #### Global Options
