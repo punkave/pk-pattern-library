@@ -48,12 +48,12 @@ Example of `data.json` for configuring component groups
       {
         "name": "typography",
         "title": "Typography",
-        "description": string,
+        "description": "This is my description",
         "components": [
           {
             "name": "typography/title-primary",
             "title": "Title Primary",
-            "description": null,
+            "description": "This is another description",
             "options": {
                 "size": "half"
             }
@@ -82,12 +82,12 @@ Example of `data.json` for configuring component groups
   ]
 ```
 
-#### Other `components` options
+#### Other component options
 
 Key | Default | Description
 ---|---|---
 size | null | `string`: 'full' or 'half', displaying the components at either 50% or 100%
-hide_code_block | null | `boolean`: to choose not display the code hide_code_block
+hide_code_block | null | `boolean`: hide the code block 
 full_screen_toggle | null | `boolean`: to choose whether to display a full screen toggle option
 
 #### Cli Commands
