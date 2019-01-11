@@ -1,6 +1,6 @@
 ## wip : pk-pattern-library
 
-#### config
+#### Get Started
 
 ```
 app.js
@@ -12,8 +12,10 @@ const apos = require('apostrophe')({
   }
 ```
 
+By default, your new pattern library will load by visiting `/styleguide`. This can be configured (see below).
 
-#### global options
+
+#### Global Options
 
 Key | Default | Description
 ---|---|---
@@ -62,7 +64,7 @@ Example of `data.json` for configuring component groups
   }
 ```
 
-#### Special component types
+#### Special Component Types
 - `Colors` is a special component that takes an array of hex values.
 ```
   "components": [
