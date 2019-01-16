@@ -4,6 +4,7 @@
 
 .pkpl__content {
   padding: 0 3rem;
+  transition: padding 0.2s;
 }
 
 .pkpl__inner {
@@ -12,14 +13,14 @@
 }
 
 .pkpl__group-title {
-  font-weight: 600;
+  font-weight: 100;
   margin-bottom: 1rem;
 }
 
 .pkpl__description {
   margin-bottom: 2rem;
   color: #616367;
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   max-width: 85rem;
 }
 
