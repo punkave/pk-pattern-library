@@ -9,6 +9,35 @@
   overflow-x: hidden;
   width: 28rem;
   border-right: 0.1rem solid #ECECEC;
+  transition: transform 0.2s;
+}
+
+.pkpl-toggle {
+  z-index: 9;
+  position: fixed;
+  left: 25.6rem;
+  top: 9rem;
+  display: none;
+  border: 0.1rem solid #ECECEC;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pkpl-toggle:focus {
+  outline: 0;
+}
+
+.pkpl-toggle:hover img {
+  opacity: 1;
+}
+
+.pkpl-toggle img {
+  opacity: 0.5;
+  transform: rotate(180deg);
+  transition: all 0.2s;
 }
 
 .pkpl__header-title {
@@ -45,10 +74,10 @@
 .pkpl__navigation-group-title {
   display: block;
   width: 100%;
-  padding: 0.6rem 3rem;
+  padding: 2rem 3rem;
   border-top: 1px solid #ECECEC;
   color: #303637;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   text-decoration: none;
   text-align: left;
   cursor: pointer;
@@ -69,7 +98,7 @@
 }
 
 .pkpl__navigation-component-title {
-  padding: 0.6rem 4.5rem;
+  padding: 2rem 4.5rem;
   border-top: none;
   border-bottom: 0.1rem solid #ECECEC;
   color: #636363;
@@ -99,4 +128,24 @@
 .pkpl__logo {
   width: 100%;
   padding: 0 3rem;
+}
+
+.pkpl.nav-is-hidden .pkpl__navigation {
+  transform: translate(-28rem);
+}
+
+.pkpl.nav-is-hidden .pkpl-toggle {
+  left: -12px;
+}
+
+.pkpl.nav-is-hidden .pkpl-toggle img {
+  transform: none;
+}
+
+.pkpl.nav-is-hidden .pkpl-toggle:hover {
+  left: -5px;
+}
+
+.pkpl.nav-is-hidden .pkpl__content {
+  padding-left: 5rem;
 }

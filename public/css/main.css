@@ -8,6 +8,9 @@
   .pkpl__navigation {
     display: block;
   }
+  .pkpl-toggle {
+    display: block;
+  }
   .pkpl__content {
     padding: 5rem 3rem 0 31rem;
   }
