@@ -1,6 +1,6 @@
 ## wip : pk-pattern-library
 
-#### config
+#### Getting Started
 
 ```
 app.js
@@ -12,8 +12,10 @@ const apos = require('apostrophe')({
   }
 ```
 
+By default, visiting `/styleguide` will load the pattern library. This is configurable (see below).
 
-#### global options
+
+#### Global Options
 
 Key | Default | Description
 ---|---|---
@@ -46,12 +48,12 @@ Example of `data.json` for configuring component groups
       {
         "name": "typography",
         "title": "Typography",
-        "description": string,
+        "description": "This is my description",
         "components": [
           {
             "name": "typography/title-primary",
             "title": "Title Primary",
-            "description": null,
+            "description": "This is another description",
             "options": {
                 "size": "half"
             }
@@ -62,7 +64,7 @@ Example of `data.json` for configuring component groups
   }
 ```
 
-#### Special component types
+#### Special Component Types
 - `Colors` is a special component that takes an array of hex values.
 ```
   "components": [
@@ -80,12 +82,13 @@ Example of `data.json` for configuring component groups
   ]
 ```
 
-#### Other `components` options
+#### Other component options
 
 Key | Default | Description
 ---|---|---
 size | null | `string`: 'full' or 'half', displaying the components at either 50% or 100%
 hide_code_block | null | `boolean`: to choose not display the code hide_code_block
+hide_code_block | null | `boolean`: hide the code block 
 
 #### Cli Commands
 
