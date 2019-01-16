@@ -87,8 +87,7 @@ Example of `data.json` for configuring component groups
 Key | Default | Description
 ---|---|---
 size | null | `string`: 'full' or 'half', displaying the components at either 50% or 100%
-hide_code_block | null | `boolean`: to choose not display the code hide_code_block
-hide_code_block | null | `boolean`: hide the code block 
+hide_code_block | null | `boolean`: hide the code block for the component
 
 #### Cli Commands
 
