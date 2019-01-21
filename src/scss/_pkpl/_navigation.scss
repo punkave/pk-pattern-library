@@ -8,20 +8,20 @@
   overflow-y: scroll;
   overflow-x: hidden;
   width: 28rem;
-  border-right: 0.1rem solid #ECECEC;
+  border-right: 0.1rem solid $pkpl-primary;
   transition: transform 0.2s;
 }
 
 .pkpl-toggle {
-  z-index: 9;
+  z-index: $pkpl-zindex-float;
   position: fixed;
-  left: 25.6rem;
   top: 9rem;
+  left: 25.6rem;
   display: none;
-  border: 0.1rem solid #ECECEC;
-  border-radius: 6px;
   padding: 0.5rem 1rem;
-  background-color: #fff;
+  border: 0.1rem solid $pkpl-primary;
+  border-radius: 6px;
+  background-color: $pkpl-white;
   cursor: pointer;
   transition: all 0.2s;
 }
@@ -43,7 +43,7 @@
 .pkpl__header-title {
   font-weight: 600;
   padding: 0 3rem;
-  font-size: 1.6rem;
+  font-size: $pkpl-font-size-3;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -52,7 +52,7 @@
   font-weight: 400;
   margin-bottom: 2rem;
   padding: 2rem 3rem;
-  font-size: 1.6rem;
+  font-size: $pkpl-font-size-3;
 }
 
 .pkpl__navigation-section {
@@ -64,8 +64,8 @@
   font-weight: 700;
   margin-bottom: 2rem;
   padding: 0 3rem;
-  color: #303637;
-  font-size: 1.2rem;
+  color: $pkpl-black;
+  font-size: $pkpl-font-size-1;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 1px;
@@ -75,16 +75,16 @@
   display: block;
   width: 100%;
   padding: 2rem 3rem;
-  border-top: 1px solid #ECECEC;
-  color: #303637;
-  font-size: 1.5rem;
+  border-top: 1px solid $pkpl-primary;
+  color: $pkpl-black;
+  font-size: $pkpl-font-size-3;
   text-decoration: none;
   text-align: left;
   cursor: pointer;
 }
 
 .pkpl__navigation-group-title.is-active {
-  border-bottom: 0.1rem solid #ECECEC;
+  border-bottom: 0.1rem solid $pkpl-primary;
 }
 
 .pkpl__navigation-group-title:focus {
@@ -100,9 +100,9 @@
 .pkpl__navigation-component-title {
   padding: 2rem 4.5rem;
   border-top: none;
-  border-bottom: 0.1rem solid #ECECEC;
-  color: #636363;
-  background-color: #f8f8f8;
+  border-bottom: 0.1rem solid $pkpl-primary;
+  color: $pkpl-gray;
+  background-color: $pkpl-background;
 }
 
 .pkpl__navigation-component-title:after {
@@ -122,7 +122,7 @@
 }
 
 .pkpl__component-group:last-of-type .pkpl__navigation-group-title {
-  border-bottom: 1px solid #ECECEC;
+  border-bottom: 1px solid $pkpl-primary;
 }
 
 .pkpl__logo {

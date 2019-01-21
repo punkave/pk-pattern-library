@@ -17,13 +17,13 @@
 
 .pkpl__color-section span {
   padding: 0.6rem;
-  border: 0.1rem solid #000;
+  border: 0.1rem solid $pkpl-black;
   border-radius: 0.6rem;
-  color: #000;
-  font-size: 1.2rem;
+  color: $pkpl-black;
+  font-size: $pkpl-font-size-1;
 }
 
 span.pkpl__color-inverse {
-  border-color: #fff;
-  color: #fff;
+  border-color: $pkpl-white;
+  color: $pkpl-white;
 }

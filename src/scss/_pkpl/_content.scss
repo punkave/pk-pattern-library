@@ -19,8 +19,8 @@
 
 .pkpl__description {
   margin-bottom: 2rem;
-  color: #616367;
-  font-size: 1.7rem;
+  color: $pkpl-gray;
+  font-size: $pkpl-font-size-4;
   max-width: 85rem;
 }
 
@@ -52,7 +52,7 @@
 
 .pkpl__component--border {
   padding: 3.6rem;
-  border: 0.1rem solid #ECECEC;
+  border: 0.1rem solid $pkpl-primary;
 }
 
 .pkpl__component-hide-code-block {

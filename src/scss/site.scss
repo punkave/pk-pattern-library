@@ -1,8 +1,13 @@
-@import 'pkpl/_content.css';
-@import 'pkpl/_navigation.css';
-@import 'pkpl/_code-block.css';
-@import 'pkpl/_color-type.css';
-@import 'pkpl/_full-width.css';
+// Settings:
+@import 'settings/_colors';
+@import 'settings/_type';
+@import 'settings/_zindex';
+
+// Pk-Pattern-Library
+@import '_pkpl/_content';
+@import '_pkpl/_navigation';
+@import '_pkpl/_code-block';
+@import '_pkpl/_color-type';
 
 @media only screen and (min-width: 860px) {
   .pkpl__navigation {
@@ -18,7 +23,6 @@
     display: inline-block;
     width: 50%;
   }
-
   .pkpl__component--full {
     display: block;
     width: 100%;
