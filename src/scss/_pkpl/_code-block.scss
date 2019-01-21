@@ -2,12 +2,12 @@
   display: block;
   width: 100%;
   padding: 0.8rem 0;
-  border: 0.1rem solid #ECECEC;
-  border-top-color: transparent;
+  border: 0.1rem solid $pkpl-primary;
+  border-top-color: $pkpl-transparent;
   border-radius: 0 0 0.6rem 0.6rem;
-  color: #616367;
-  font-family: 'Nunito', sans-serif;
-  font-size: 1.2rem;
+  color: $pkpl-black;
+  font-family: $pkpl-font-family;
+  font-size: $pkpl-font-size-1;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;
@@ -15,7 +15,7 @@
 }
 
 .pkpl__markup-toggle.is-active {
-  border-top-color: #ECECEC;
+  border-top-color: $pkpl-primary;
 }
 
 .pkpl__markup-toggle:focus {
@@ -24,8 +24,8 @@
 
 .pkpl__markup-container {
   display: none;
-  border: 0.1rem solid #ECECEC;
-  border-top-color: transparent;
+  border: 0.1rem solid $pkpl-primary;
+  border-top-color: $pkpl-transparent;
   border-bottom: none;
 }
 
@@ -35,6 +35,6 @@
 
 code.hljs {
   padding: 3rem;
-  background-color: #fff;
-  font-size: 1.4rem;
+  background-color: $pkpl-white;
+  font-size: $pkpl-font-size-2;
 }

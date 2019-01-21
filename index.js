@@ -14,8 +14,7 @@ module.exports = {
     return callback(null);
   },
   afterConstruct: function (self) {
-    self.pushAsset('script', 'markupToggle', { when: 'always' });
-    self.pushAsset('script', 'navigationToggle', { when: 'always' });
-    self.pushAsset('script', 'toggleFullWidth', { when: 'always' });
+    self.pushAsset('script', 'always', { when: 'always' });
+    self.pushAsset('stylesheet', 'always', { when: 'always' });
   }
 };
