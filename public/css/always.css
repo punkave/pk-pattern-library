@@ -3,6 +3,7 @@
 
 .pkpl__content {
   padding: 0 3rem;
+  -webkit-transition: padding 0.2s;
   transition: padding 0.2s; }
 
 .pkpl__inner {
@@ -30,6 +31,7 @@
   margin-bottom: 1rem; }
 
 .pkpl__components {
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
@@ -64,7 +66,10 @@
   overflow-x: hidden;
   width: 28rem;
   border-right: 0.1rem solid #ECECEC;
-  transition: transform 0.2s; }
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s; }
 
 .pkpl-toggle {
   z-index: 9;
@@ -77,6 +82,7 @@
   border-radius: 6px;
   background-color: #FFF;
   cursor: pointer;
+  -webkit-transition: all 0.2s;
   transition: all 0.2s; }
 
 .pkpl-toggle:focus {
@@ -87,7 +93,9 @@
 
 .pkpl-toggle img {
   opacity: 0.5;
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: all 0.2s;
   transition: all 0.2s; }
 
 .pkpl__header-title {
@@ -166,13 +174,15 @@
   padding: 0 3rem; }
 
 .pkpl.nav-is-hidden .pkpl__navigation {
-  transform: translate(-28rem); }
+  -webkit-transform: translate(-28rem);
+          transform: translate(-28rem); }
 
 .pkpl.nav-is-hidden .pkpl-toggle {
   left: -12px; }
 
 .pkpl.nav-is-hidden .pkpl-toggle img {
-  transform: none; }
+  -webkit-transform: none;
+          transform: none; }
 
 .pkpl.nav-is-hidden .pkpl-toggle:hover {
   left: -5px; }
@@ -216,6 +226,7 @@ code.hljs {
   font-size: 1.4rem; }
 
 .pkpl__color-container {
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
@@ -224,12 +235,15 @@ code.hljs {
   margin-left: -4rem; }
 
 .pkpl__color-section {
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 20%;
   height: 12rem;
   margin: 0 0 4rem 4rem;

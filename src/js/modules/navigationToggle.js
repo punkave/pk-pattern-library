@@ -7,7 +7,7 @@ export default {
 };
 
 function init () {
-  if (!document.querySelectorAll(toggle).length || !document.querySelectorAll(navToggle).length) {
+  if (!document.querySelectorAll(navToggle).length) {
     return false;
   } else {
     return bindEvents();
