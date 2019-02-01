@@ -30,6 +30,7 @@
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
     "fs-extra": "^7.0.1",
+    "pk-webpack": "punkave/pk-webpack",
     "stylelint": "^9.10.1",
     "stylelint-config-punkave": "^0.1.0",
     "stylelint-declaration-strict-value": "^1.1.2"
