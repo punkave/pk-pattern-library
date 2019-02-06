@@ -40,7 +40,7 @@
             <p class="pkpl__navigation-section-title">Components</p>
             {% for group in config.groups %}
               <div class="pkpl__component-group">
-                <button data-role="component-toggle" class="pkpl__navigation-group-title">{{ group.title }}</button>
+                <button data-role="component-toggle" class="pkpl__navigation-group-title pkpl__navigation-group-toggle">{{ group.title }}</button>
                 {% if group.components.length %}
                   <ul data-role="component-group" class="pkpl__navigation-group-list">
                     {% for component in group.components %}
