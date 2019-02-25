@@ -3,7 +3,6 @@
 
 .pkpl__content {
   padding: 0 3rem;
-  -webkit-transition: padding 0.2s;
   transition: padding 0.2s; }
 
 .pkpl__inner {
@@ -31,7 +30,6 @@
   margin-bottom: 1rem; }
 
 .pkpl__components {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
@@ -66,10 +64,7 @@
   overflow-x: hidden;
   width: 28rem;
   border-right: 0.1rem solid #ECECEC;
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
-  transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s; }
+  transition: transform 0.2s; }
 
 .pkpl-toggle {
   z-index: 9;
@@ -80,9 +75,8 @@
   padding: 0.5rem 1rem;
   border: 0.1rem solid #ECECEC;
   border-radius: 6px;
-  background-color: #FFF;
+  background-color: #FFFFFF;
   cursor: pointer;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s; }
 
 .pkpl-toggle:focus {
@@ -93,9 +87,7 @@
 
 .pkpl-toggle img {
   opacity: 0.5;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  -webkit-transition: all 0.2s;
+  transform: rotate(180deg);
   transition: all 0.2s; }
 
 .pkpl__header-title {
@@ -119,7 +111,7 @@
   font-weight: 700;
   margin-bottom: 2rem;
   padding: 0 3rem;
-  color: #000;
+  color: #000000;
   font-size: 1.2rem;
   text-transform: uppercase;
   text-decoration: none;
@@ -130,7 +122,7 @@
   width: 100%;
   padding: 2rem 3rem;
   border-top: 1px solid #ECECEC;
-  color: #000;
+  color: #000000;
   font-size: 1.6rem;
   text-decoration: none;
   text-align: left;
@@ -174,15 +166,13 @@
   padding: 0 3rem; }
 
 .pkpl.nav-is-hidden .pkpl__navigation {
-  -webkit-transform: translate(-28rem);
-          transform: translate(-28rem); }
+  transform: translate(-28rem); }
 
 .pkpl.nav-is-hidden .pkpl-toggle {
   left: -12px; }
 
 .pkpl.nav-is-hidden .pkpl-toggle img {
-  -webkit-transform: none;
-          transform: none; }
+  transform: none; }
 
 .pkpl.nav-is-hidden .pkpl-toggle:hover {
   left: -5px; }
@@ -197,7 +187,7 @@
   border: 0.1rem solid #ECECEC;
   border-top-color: transparent;
   border-radius: 0 0 0.6rem 0.6rem;
-  color: #000;
+  color: #000000;
   font-family: "Nunito", sans-serif;
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -222,11 +212,10 @@
 
 code.hljs {
   padding: 3rem;
-  background-color: #FFF;
+  background-color: #FFFFFF;
   font-size: 1.4rem; }
 
 .pkpl__color-container {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
@@ -235,15 +224,12 @@ code.hljs {
   margin-left: -4rem; }
 
 .pkpl__color-section {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
   width: 20%;
   height: 12rem;
   margin: 0 0 4rem 4rem;
@@ -251,14 +237,14 @@ code.hljs {
 
 .pkpl__color-section span {
   padding: 0.6rem;
-  border: 0.1rem solid #000;
+  border: 0.1rem solid #000000;
   border-radius: 0.6rem;
-  color: #000;
+  color: #000000;
   font-size: 1.2rem; }
 
 span.pkpl__color-inverse {
-  border-color: #FFF;
-  color: #FFF; }
+  border-color: #FFFFFF;
+  color: #FFFFFF; }
 
 @media only screen and (min-width: 860px) {
   .pkpl__navigation {
