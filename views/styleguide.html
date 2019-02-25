@@ -9,7 +9,8 @@
 {% endblock %}
 {% block main %}
   <div class="pkpl" data-role="container" data-slug="{{ data.slug }}">
-    <button title="toggle" class="pkpl-toggle" data-role="nav-toggle">
+    <button title="toggle" aria-label="toggle" class="pkpl-toggle" data-role="nav-toggle">
+      <span class="pkpl__sr-only">Toggle Nav</span>
       <img alt="" src="/modules/pk-pattern-library/svgs/chev-right.svg"/>
     </button>
     <div class="pkpl__navigation">
