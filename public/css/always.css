@@ -53,6 +53,10 @@
   margin-bottom: 4rem;
   padding-left: 3rem; }
 
+.pkpl__sr-only {
+  position: absolute;
+  left: -999rem; }
+
 .pkpl__navigation {
   position: fixed;
   top: 0;
