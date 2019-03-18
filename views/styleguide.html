@@ -1,0 +1,126 @@
+{% extends 'layout.html' %}
+{% block beforeMain %}{% endblock %}
+{% block afterMain %}{% endblock %}
+{% set config = data.config %}
+{% block title %}Pattern Library{% endblock %}
+{% block extraHead %}
+  {{ super() }}
+  {% include "extraHead.html" ignore missing %}
+{% endblock %}
+{% block main %}
+  <div class="pkpl" data-role="container" data-slug="{{ data.slug }}">
+    <button title="toggle" aria-label="toggle" class="pkpl-toggle" data-role="nav-toggle">
+      <span class="pkpl__sr-only">Toggle Nav</span>
+      <img alt="" src="/modules/pk-pattern-library/svgs/chev-right.svg"/>
+    </button>
+    <div class="pkpl__navigation">
+      <div class="pkpl__inner">
+        {% if not config.hide_project_name %}
+          <h5 class="pkpl__header-title">{{ config.project_name }}</h5>
+        {% endif %}
+        {% if config.project_logo %}
+          <a href="/">
+            <img alt="Pattern Library Logo" class="pkpl__logo" src="{{ config.project_logo }}"/>
+          </a>
+        {% endif %}
+        <h2 class="pkpl__navigation-title">Pattern Library</h2>
+        <nav class="pkpl__navigation-items">
+          {% if config.overview %}
+            <div class="pkpl__navigation-section">
+              {% for overview in config.overview %}
+                <p class="pkpl__navigation-section-title">Overview</p>
+                {% for group in config.overview %}
+                  <div class="pkpl__component-group">
+                    <a class="pkpl__navigation-group-title" href="#{{ group.name }}">{{ group.title }}</a>
+                  </div>
+                {% endfor %}
+              {% endfor %}
+            </div>
+          {% endif %}
+          <div class="pkpl__navigation-section">
+            <p class="pkpl__navigation-section-title">Components</p>
+            {% for group in config.groups %}
+              <div class="pkpl__component-group">
+                <button data-role="component-toggle" class="pkpl__navigation-group-title pkpl__navigation-group-toggle">{{ group.title }}</button>
+                {% if group.components.length %}
+                  <ul data-role="component-group" class="pkpl__navigation-group-list">
+                    {% for component in group.components %}
+                      <li><a class="pkpl__navigation-group-title pkpl__navigation-component-title" href="#{{ component.name }}">{{ component.title }}</a></li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              </div>
+            {% endfor %}
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="pkpl__content">
+      <div class="pkpl__inner">
+        {% if config.overview.length %}
+          {% for overview in config.overview %}
+            <div class="pkpl__group">
+              <h3 class="pkpl__group-title">Overview</h3>
+              <h5 class="pkpl__component-title" id="{{ overview.name }}">{{ overview.title }}</h5>
+              <p class="pkpl__description">
+                {{ overview.description }}
+              </p>
+            </div>
+          {% endfor %}
+        {% endif %}
+        {% for group in config.groups %}
+          <div class="pkpl__group">
+            <div class="pkpl__group-meta">
+              <h3 id="{{ group.name }}" class="pkpl__group-title">{{ group.title }}</h3>
+              {% if group.description %}
+                <p class="pkpl__description pkpl__group-description">{{ group.description }}</p>
+              {% endif %}
+            </div>
+            {% if group.components.length %}
+              <div class="pkpl__components">
+                {% for component in group.components %}
+                  <div class="pkpl__component-section pkpl__component--{{ component.options.size }}">
+                    <h5 id="{{ component.name }}" class="pkpl__component-title">{{ component.title }}</h5>
+                    {% if component.description %}
+                      <p class="pkpl__description">
+                        {{ component.description }}
+                      </p>
+                    {% endif %}
+                    {% if component.colors %}
+                      <div class="pkpl__color-container">
+                        {% for color in component.colors %}
+                          <div class="pkpl__color-section" style="background-color: {{ color }}">
+                            <span class="{{ 'pkpl__color-inverse' if apos.templates.hexToRGB(color) }}">{{ color }}</span>
+                          </div>
+                        {% endfor %}
+                      </div>
+                    {% else %}
+                      <div class="pkpl__component {{ 'pkpl__component--border' if not component.options.no_component_border }} {{ 'pkpl__component-hide-code-block' if component.options.hide_code_block }}">
+                        {% include 'components/' + component.name + "/component.html" ignore missing %}
+                        {% if component.options.full_screen_toggle %}<button aria-label="Expand Full Screen" class="pkpl__full-toggle" data-component="{{ component.name }}" data-role="full-width-toggle"><img alt="full screen" src="/modules/pk-pattern-library/svgs/full-screen.svg"></img></button>{% endif %}
+                      </div>
+                      {% if not component.options.hide_code_block %}
+                        <div data-role="markup-container" class="pkpl__markup-container">
+                          <pre><code>
+                            {% include 'components/' + component.name + "/markup.html" ignore missing %}
+                          </code></pre>
+                        </div>
+                        <button data-role="markup-toggle" class="pkpl__markup-toggle">Code</button>
+                      {% endif %}
+                    {% endif %}
+                  </div>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <script src="/modules/pk-pattern-library/js/vendor/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+    document.querySelectorAll("code").forEach(function(element) {
+    element.innerHTML = element.innerHTML.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;").trim();});
+  </script>
+{% endblock %}

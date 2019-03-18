@@ -1,0 +1,65 @@
+.pkpl__group {
+  margin-bottom: 6rem;
+}
+
+.pkpl__content {
+  padding: 0 3rem;
+  transition: padding 0.2s;
+}
+
+.pkpl__inner {
+  width: 100%;
+  padding: 3rem 0;
+}
+
+.pkpl__group-title {
+  font-weight: 100;
+  margin-bottom: 1rem;
+}
+
+.pkpl__description {
+  margin-bottom: 2rem;
+  color: $pkpl-gray;
+  font-size: $pkpl-font-size-4;
+  max-width: 85rem;
+}
+
+.pkpl__group-description {
+  margin-bottom: 1rem;
+}
+
+.pkpl__group-meta {
+  margin-bottom: 4rem;
+}
+
+.pkpl__component-title {
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.pkpl__components {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -3rem;
+}
+
+.pkpl__component {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 6px 6px 0 0;
+}
+
+.pkpl__component--border {
+  padding: 3.6rem;
+  border: 0.1rem solid $pkpl-primary;
+}
+
+.pkpl__component-hide-code-block {
+  border-radius: 6px;
+}
+
+.pkpl__component-section {
+  margin-bottom: 4rem;
+  padding-left: 3rem;
+}

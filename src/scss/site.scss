@@ -1,0 +1,31 @@
+// Settings:
+@import 'settings/_colors';
+@import 'settings/_type';
+@import 'settings/_zindex';
+
+// Pk-Pattern-Library
+@import '_pkpl/_content';
+@import '_pkpl/_display';
+@import '_pkpl/_navigation';
+@import '_pkpl/_code-block';
+@import '_pkpl/_color-type';
+
+@media only screen and (min-width: 860px) {
+  .pkpl__navigation {
+    display: block;
+  }
+  .pkpl-toggle {
+    display: block;
+  }
+  .pkpl__content {
+    padding: 5rem 3rem 0 31rem;
+  }
+  .pkpl__component--half {
+    display: inline-block;
+    width: 50%;
+  }
+  .pkpl__component--full {
+    display: block;
+    width: 100%;
+  }
+}

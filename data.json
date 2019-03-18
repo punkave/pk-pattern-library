@@ -1,0 +1,13 @@
+{
+  "project_name": "Project Name",
+  "project_logo": null,
+  "hide_project_name": false,
+  "overview": [
+    {
+      "name": "introduction",
+      "title": "Introduction",
+      "description": "Hello. This is an empty pattern library boilerplate."
+    }
+  ],
+  "groups": []
+}
