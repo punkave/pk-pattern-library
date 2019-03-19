@@ -50,6 +50,28 @@
   border-radius: 6px 6px 0 0;
 }
 
+.pkpl__component-externals {
+  padding: 1rem;
+  border: 0.1rem solid $pkpl-primary;
+  border-top: none;
+  border-radius: 0 0 0.6rem 0.6rem;
+  span {
+    display: block;
+    color: $pkpl-black;
+    font-size: $pkpl-font-size-1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    a {
+      text-transform: none;
+      letter-spacing: normal;
+      font-weight: 400;
+      margin-left: 0.5rem;
+      color: $pkpl-black;
+    }
+  }
+}
+
 .pkpl__component--border {
   padding: 3.6rem;
   border: 0.1rem solid $pkpl-primary;

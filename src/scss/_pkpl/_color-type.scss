@@ -5,14 +5,44 @@
   margin-left: -4rem;
 }
 
+.pkpl__color-section-wrapper {
+  width: 20%;
+  margin: 0 0 4rem 4rem;
+}
+
 .pkpl__color-section {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 20%;
+  width: 100%;
   height: 12rem;
-  margin: 0 0 4rem 4rem;
-  border-radius: 0.6rem;
+  border-radius: 0.6rem 0.6rem 0 0;
+}
+
+.pkpl__color-meta {
+  padding: 1rem;
+  border: 0.1rem solid $pkpl-primary;
+  border-top: none;
+  border-radius: 0 0 0.6rem 0.6rem;
+}
+
+.pkpl__color-name {
+  display: block;
+  font-weight: 700;
+  color: $pkpl-black;
+  font-size: $pkpl-font-size-1;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.pkpl__color-hex {
+  display: block;
+  font-size: $pkpl-font-size-2;
+}
+
+.pkpl__color-cmyk {
+  display: block;
+  font-size: $pkpl-font-size-2;
 }
 
 .pkpl__color-section span {
@@ -26,4 +56,9 @@
 span.pkpl__color-inverse {
   border-color: $pkpl-white;
   color: $pkpl-white;
+}
+
+.pkpl__component-border-alt {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
