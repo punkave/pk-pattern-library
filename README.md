@@ -88,7 +88,7 @@ gradient | null | `string`: Gradient css values
         {
           "label": "Primary",
           "hex": "#000",
-          "cmyk" true
+          "cmyk": true
         },
         {
           "label": "Secondary",
