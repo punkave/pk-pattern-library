@@ -3,6 +3,7 @@
 
 .pkpl__content {
   padding: 0 3rem;
+  -webkit-transition: padding 0.2s;
   transition: padding 0.2s; }
 
 .pkpl__inner {
@@ -30,6 +31,7 @@
   margin-bottom: 1rem; }
 
 .pkpl__components {
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
@@ -41,6 +43,25 @@
   display: block;
   overflow: hidden;
   border-radius: 6px 6px 0 0; }
+
+.pkpl__component-externals {
+  padding: 1rem;
+  border: 0.1rem solid #ECECEC;
+  border-top: none;
+  border-radius: 0 0 0.6rem 0.6rem; }
+  .pkpl__component-externals span {
+    display: block;
+    color: #000000;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700; }
+    .pkpl__component-externals span a {
+      text-transform: none;
+      letter-spacing: normal;
+      font-weight: 400;
+      margin-left: 0.5rem;
+      color: #000000; }
 
 .pkpl__component--border {
   padding: 3.6rem;
@@ -68,7 +89,10 @@
   overflow-x: hidden;
   width: 28rem;
   border-right: 0.1rem solid #ECECEC;
-  transition: transform 0.2s; }
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s; }
 
 .pkpl-toggle {
   z-index: 9;
@@ -81,6 +105,7 @@
   border-radius: 6px;
   background-color: #FFFFFF;
   cursor: pointer;
+  -webkit-transition: all 0.2s;
   transition: all 0.2s; }
 
 .pkpl-toggle:focus {
@@ -91,7 +116,9 @@
 
 .pkpl-toggle img {
   opacity: 0.5;
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: all 0.2s;
   transition: all 0.2s; }
 
 .pkpl__header-title {
@@ -171,13 +198,15 @@
   padding: 0 3rem; }
 
 .pkpl.nav-is-hidden .pkpl__navigation {
-  transform: translate(-28rem); }
+  -webkit-transform: translate(-28rem);
+          transform: translate(-28rem); }
 
 .pkpl.nav-is-hidden .pkpl-toggle {
   left: -12px; }
 
 .pkpl.nav-is-hidden .pkpl-toggle img {
-  transform: none; }
+  -webkit-transform: none;
+          transform: none; }
 
 .pkpl.nav-is-hidden .pkpl-toggle:hover {
   left: -5px; }
@@ -221,6 +250,7 @@ code.hljs {
   font-size: 1.4rem; }
 
 .pkpl__color-container {
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
@@ -228,17 +258,45 @@ code.hljs {
   max-width: 80rem;
   margin-left: -4rem; }
 
+.pkpl__color-section-wrapper {
+  width: 20%;
+  margin: 0 0 4rem 4rem; }
+
 .pkpl__color-section {
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  width: 20%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
   height: 12rem;
-  margin: 0 0 4rem 4rem;
-  border-radius: 0.6rem; }
+  border-radius: 0.6rem 0.6rem 0 0; }
+
+.pkpl__color-meta {
+  padding: 1rem;
+  border: 0.1rem solid #ECECEC;
+  border-top: none;
+  border-radius: 0 0 0.6rem 0.6rem; }
+
+.pkpl__color-name {
+  display: block;
+  font-weight: 700;
+  color: #000000;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+
+.pkpl__color-hex {
+  display: block;
+  font-size: 1.4rem; }
+
+.pkpl__color-cmyk {
+  display: block;
+  font-size: 1.4rem; }
 
 .pkpl__color-section span {
   padding: 0.6rem;
@@ -250,6 +308,10 @@ code.hljs {
 span.pkpl__color-inverse {
   border-color: #FFFFFF;
   color: #FFFFFF; }
+
+.pkpl__component-border-alt {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0; }
 
 @media only screen and (min-width: 860px) {
   .pkpl__navigation {

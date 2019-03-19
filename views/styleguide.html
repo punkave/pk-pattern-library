@@ -89,13 +89,37 @@
                     {% if component.colors %}
                       <div class="pkpl__color-container">
                         {% for color in component.colors %}
-                          <div class="pkpl__color-section" style="background-color: {{ color }}">
-                            <span class="{{ 'pkpl__color-inverse' if apos.templates.hexToRGB(color) }}">{{ color }}</span>
+                          {% set cmyk = null %}
+                          {% set hex = null %}
+                          {% set label = null %}
+                          {% set gradient = null %}
+                          {% if apos.templates.isObject(color) %}
+                            {% set label = color.label %}
+                            {% set hex = color.hex %}
+                            {% set gradient = color.gradient %}
+                            {% if color.cmyk and color.cmyk  %}
+                              {% if color.cmyk === true %}
+                                {% set cmyk = apos.templates.hexToCmyk(hex) %}
+                              {% else %}
+                                {% set cmyk = color.cmyk %}
+                              {% endif %}
+                            {% endif %}
+                          {% else %}
+                            {% set hex = color %}
+                          {% endif %}
+                          <div class="pkpl__color-section-wrapper">
+                            <div class="pkpl__color-section" style="background: {{ hex or gradient }}"></div>
+                            <div class="pkpl__color-meta">
+                              {% if label %}<span class="pkpl__color-name">{{ label }}</span>{% endif %}
+                              {% if hex %}<span class="pkpl__color-hex">{{ hex }}</span>{% endif %}
+                              {% if cmyk %}<span class="pkpl__color-cmyk">{{ cmyk }}</span>{% endif %}
+                              {% if gradient %}<span class="pkpl__color-cmyk">{{ gradient }}</span>{% endif %}
+                            </div>
                           </div>
                         {% endfor %}
                       </div>
                     {% else %}
-                      <div class="pkpl__component {{ 'pkpl__component--border' if not component.options.no_component_border }} {{ 'pkpl__component-hide-code-block' if component.options.hide_code_block }}">
+                      <div {% if component.backgroundColor %} style="background: {{ component.backgroundColor }}" {% endif %} class="pkpl__component {{ 'pkpl__component--border' if not component.options.no_component_border }} {{ 'pkpl__component-hide-code-block' if component.options.hide_code_block }} {{ 'pkpl__component-border-alt' if component.externals and component.externals.length > 0 }}">
                         {% include 'components/' + component.name + "/component.html" ignore missing %}
                         {% if component.options.full_screen_toggle %}<button aria-label="Expand Full Screen" class="pkpl__full-toggle" data-component="{{ component.name }}" data-role="full-width-toggle"><img alt="full screen" src="/modules/pk-pattern-library/svgs/full-screen.svg"></img></button>{% endif %}
                       </div>
@@ -107,6 +131,13 @@
                         </div>
                         <button data-role="markup-toggle" class="pkpl__markup-toggle">Code</button>
                       {% endif %}
+                    {% endif %}
+                    {% if component.externals and component.externals.length > 0 %}
+                      <div class="pkpl__component-externals">
+                        {% for external in component.externals %}
+                          <span>{{ external.label }}<a target="_blank" rel="noopener" href="{{ external.url }}">Download</a></span>
+                        {% endfor %}
+                      </div>
                     {% endif %}
                   </div>
                 {% endfor %}

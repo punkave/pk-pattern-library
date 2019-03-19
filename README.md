@@ -69,7 +69,14 @@ Example of `data.json` for configuring component groups
 ```
 
 #### Special Component Types
-- `Colors` is a special component that takes an array of hex values.
+- `Colors` is a special component that takes an array of hex values, or objects that contain information about the color. Available properties are
+
+Key | Default | Description
+---|---|---
+label | null | `string`: Variable name
+hex | null | `string`: Hex value
+cmyk | null | `string` or `boolean`: CMYK value, or if `true`, will automatically convert based on hex value.
+gradient | null | `string`: Gradient css values
 ```
   "components": [
     {
@@ -77,7 +84,16 @@ Example of `data.json` for configuring component groups
       "title": "Colors",
       "colors": [
         "#2F2D41",
-        "#472B8A"
+        "#472B8A",
+        {
+          "label": "Primary",
+          "hex": "#000",
+          "cmyk" true
+        },
+        {
+          "label": "Secondary",
+          "gradient": "linear-gradient(to bottom right, #472B8A, #834192)"
+        }
       ],
       "options": {
         "size": "full"
