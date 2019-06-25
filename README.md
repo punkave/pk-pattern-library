@@ -1,9 +1,5 @@
 ## wip : pk-pattern-library
 
-#### Dependencies
-
-This module relies on [pk-webpack](https://github.com/punkave/pk-webpack) for development, which is currently work-in-progress. To test this module in development, you must clone both of these repositories and `npm-link` them.
-
 #### Getting Started
 
 ```
