@@ -12,8 +12,6 @@ module.exports = {
   },
   afterConstruct: function (self) {
     self.pushAsset('script', 'always', { when: 'always' });
-    self.pushAsset('stylesheet', 'vendor/highlight', { when: 'always' });
-    self.pushAsset('stylesheet', 'vendor/skeleton', { when: 'always' });
     self.pushAsset('stylesheet', 'always', { when: 'always' });
   }
 };
