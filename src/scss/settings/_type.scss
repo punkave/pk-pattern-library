@@ -8,12 +8,10 @@ $pkpl-font-size-4: 1.8rem;
 $pkpl-color-text: #222;
 
 .pk-pattern-library {
-  body {
-    color: $pkpl-color-text;
-    font-family: $pkpl-font-family;
-    font-size: $pkpl-font-size-3;
-    line-height: 1.6;
-  }
+  color: $pkpl-color-text;
+  font-family: $pkpl-font-family;
+  font-size: $pkpl-font-size-3;
+  line-height: 1.6;
 
   @media (min-width: 55rem) {
     // stylelint-disable scale-unlimited/declaration-strict-value
