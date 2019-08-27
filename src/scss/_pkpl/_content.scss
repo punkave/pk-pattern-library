@@ -1,3 +1,13 @@
+.pkpl__navigation,
+.pkpl__group-title,
+.pkpl__component-title
+.pkpl__description,
+.pkpl__color-container,
+.pkpl__markup-container,
+.pkpl__component-externals {
+  font-family: $pkpl-font-family;
+}
+
 .pkpl__group {
   margin-bottom: 6rem;
 }
