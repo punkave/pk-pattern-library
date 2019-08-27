@@ -10,6 +10,12 @@
 @import '_pkpl/_code-block';
 @import '_pkpl/_color-type';
 
+.pkpl__component--half,
+.pkpl__component--full {
+  display: block;
+  width: 100%;
+}
+
 @media only screen and (min-width: 860px) {
   .pkpl__navigation {
     display: block;
@@ -23,9 +29,5 @@
   .pkpl__component--half {
     display: inline-block;
     width: 50%;
-  }
-  .pkpl__component--full {
-    display: block;
-    width: 100%;
   }
 }
