@@ -35,13 +35,13 @@ components | null | `array`: a collection of components that you wish to include
 Example of `data.json` for configuring component groups
 ```
   {
-    "project_name": 'Test Project',
-    "project_logo": '/image.png',
+    "project_name": "Test Project",
+    "project_logo": "/image.png",
     "overview": [
       {
         "name": "introduction",
-        "title": 'Introduction',
-        "description": 'This is a description',
+        "title": "Introduction",
+        "description": "This is a description"
       }
     ],
     "groups": [
