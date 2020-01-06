@@ -105,6 +105,7 @@ Key | Default | Description
 size | null | `string`: 'full' or 'half', displaying the components at either 50% or 100%
 hide_code_block | null | `boolean`: hide the code block for the component
 externals | null | `array` of `objects`: provide a `label` and `url` pointing to any external file.
+background_color | null | `hex` value: make the area around the component something besides white `#ffffff`
 
 #### Cli Commands
 

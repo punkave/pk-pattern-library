@@ -119,7 +119,7 @@
                         {% endfor %}
                       </div>
                     {% else %}
-                      <div {% if component.backgroundColor %} style="background: {{ component.backgroundColor }}" {% endif %} class="pkpl__component {{ 'pkpl__component--border' if not component.options.no_component_border }} {{ 'pkpl__component-hide-code-block' if component.options.hide_code_block }} {{ 'pkpl__component-border-alt' if component.externals and component.externals.length > 0 }}">
+                      <div {% if component.options.background_color %} style="background: {{ component.options.background_color }}" {% endif %} class="pkpl__component {{ 'pkpl__component--border' if not component.options.no_component_border }} {{ 'pkpl__component-hide-code-block' if component.options.hide_code_block }} {{ 'pkpl__component-border-alt' if component.externals and component.externals.length > 0 }}">
                         {% include 'components/' + component.name + "/component.html" ignore missing %}
                         {% if component.options.full_screen_toggle %}<button aria-label="Expand Full Screen" class="pkpl__full-toggle" data-component="{{ component.name }}" data-role="full-width-toggle"><img alt="full screen" src="/modules/pk-pattern-library/svgs/full-screen.svg"></img></button>{% endif %}
                       </div>
