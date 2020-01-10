@@ -107,12 +107,12 @@ hide_code_block | null | `boolean`: hide the code block for the component
 externals | null | `array` of `objects`: provide a `label` and `url` pointing to any external file.
 background_color | null | `hex` value: make the area around the component something besides white `#ffffff`
 
-#### Cli Commands
+#### CLI Command
 
-Scaffold a component using this command, where `foo` is the group, and `bar` is the component name. This will create a `component.html` and `markdown.html` file/folder structure, and append the data to `data.json`. Very bare minimum required to render.
+Scaffold a component using this command, where `group` is the group name, and `component` is the component name. This will create a `component.html` and `markdown.html` file/folder structure, and append the data to `data.json`. The bare minimum required to render.
 
 ```
-$ node app MODULE_NAME:create foo bar
+$ node app MODULE_NAME:create group component
 ```
 
 #### Examples
