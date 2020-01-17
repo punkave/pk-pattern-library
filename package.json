@@ -36,5 +36,7 @@
     "stylelint-config-punkave": "^0.1.0",
     "stylelint-declaration-strict-value": "^1.1.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "babel-cli": "^6.26.0"
+  }
 }
