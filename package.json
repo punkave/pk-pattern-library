@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node lib/webpack-dev.js",
-    "prod": "node lib/webpack-prod.js && babel public/js/always.js > public/js/always.js",
+    "prod": "node lib/webpack-prod.js && babel public/js/always.js > public/js/always-compiled.js  && mv -f public/js/always-compiled.js public/js/always.js",
     "eslint": "./node_modules/.bin/eslint \"src/**/*.js\"",
     "stylelint": "./node_modules/.bin/stylelint \"src/**/*.scss\""
   },
