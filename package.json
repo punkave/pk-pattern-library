@@ -1,12 +1,12 @@
 {
   "name": "pk-pattern-library",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "A pattern library generator for ApostropheCMS.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node lib/webpack-dev.js",
-    "prod": "node lib/webpack-prod.js && babel public/js/always.js > public/js/always.js",
+    "prod": "node lib/webpack-prod.js && babel public/js/always.js > public/js/always-compiled.js  && mv -f public/js/always-compiled.js public/js/always.js",
     "eslint": "./node_modules/.bin/eslint \"src/**/*.js\"",
     "stylelint": "./node_modules/.bin/stylelint \"src/**/*.scss\""
   },
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/punkave/pk-pattern-library#readme",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "chalk": "^2.4.2",
     "color-convert": "^2.0.1",
     "eslint": "^5.16.0",
@@ -31,12 +32,9 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "fs-extra": "^7.0.1",
-    "pk-webpack": "git+https://punkhub:5cafa101c142b77ee0edc5f7cb098ca7b7213f8b@github.com/punkave/pk-webpack.git#v1.0.0",
+    "pk-webpack": "github:punkave/pk-webpack",
     "stylelint": "^9.10.1",
     "stylelint-config-punkave": "^0.1.0",
     "stylelint-declaration-strict-value": "^1.1.8"
-  },
-  "dependencies": {
-    "babel-cli": "^6.26.0"
   }
 }
