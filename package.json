@@ -1,6 +1,6 @@
 {
   "name": "pk-pattern-library",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "A pattern library generator for ApostropheCMS.",
   "main": "index.js",
   "scripts": {
@@ -32,7 +32,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "fs-extra": "^7.0.1",
-    "pk-webpack": "github:punkave/pk-webpack",
+    "pk-webpack": "^1.0.1",
     "stylelint": "^9.10.1",
     "stylelint-config-punkave": "^0.1.0",
     "stylelint-declaration-strict-value": "^1.1.8"
